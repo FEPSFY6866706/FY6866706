@@ -169,4 +169,21 @@
    </p>
 <img src="download.jpeg" alt="bottom banner" width="1400" height="400">
     <h5 style="font:arial;"><b> The University of Sydney Nano Institute, 2017 </b> </h5>
+
+<p id="totalwordcount"></p>
+    <hr>
+    <script>
+      function displaywordcount(sectionId, outputId) {
+      const text = index.html(sectionId). textContext;
+      const wordArray = text.trim().split(/\s+/);
+      const wordcount = wordArray.length;
+      return wordcount;
+      }
+      function displaytotalwordcount() {
+      const Introductioncount = displaywordcount("Introduction_InText");
+      const Analysiscount = displaywordcount("Analysis_InText");
+      const totalwordcount = Introductioncount + Analysiscount;
+      index.html("totalwordcount").innerText = 'Total Word Count: ${totalwordcount}':
+      window.onload = displaytotalwordcount;
+    </script>
 </html>
