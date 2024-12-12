@@ -28,7 +28,24 @@
      <link  rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
      </style>
   <head>
-
+ <p id="totalwordcount"></p>
+    <hr>
+    <script>
+      function displaywordcount(sectionId, outputId) {
+      const text = document.getElementById(sectionId). textContext;
+      const wordArray = text.trim().split(/\s+/);
+      const wordCount = wordArray.length;
+      return wordCount;
+      }
+      function displayTotalWordCount() {
+      const IntroductionCount = displayWordCount("Introduction_InText");
+      const AnalysisCount = displayWordCount("Analysis_InText");
+      const totalWordCount = IntroductionCount + AnalysisCount
+      return wordCount;
+      }
+      window.onLoad =displayTotalWordCount;
+    </script>
+      
   <!table of contents>
     <table>
       <tr>
@@ -62,11 +79,12 @@
         <td><a href="#References">References</td>
       </tr>
     </table>
-
+  
     <Abstract>
       <h3 id="Abstract">Abstract</h3>
     </Abstract>
     <p>
+      <pre ID="Analysis_InText" class"=ex1>
     <h4 style="font-family:arial;"><b>Nanobots are tiny machines created to carry out tasks on a nanoscale within the human body, these robots have a potential to deliver targeted drugs therapies, perform minimally invasive procedures, and improve efficiency in treatments for diseases such as cancer and diabetes.
       There are four main types of nanobots that are powered through various methods. 
       Despite their promise they face challenges due to the excessive cost, immune response, and current materials available.
@@ -78,6 +96,7 @@
       <h3 id="Introduction">Introduction</h3>
     </Introduction>
     <p>
+        <pre ID="Introduction_InText" class"=ex1>
     <h4 style="font-family:arial;"><b> Nanorobots or nanobots are extremely small robots typically 50-100nm wide.
       They are currently being assessed to carry out tasks and procedures on human bodies on a nanoscale that doctors will not be able to complete, enabling medical innervations that would be impossible or too invasive for doctors to perform.
       By using nanobots procedures will not leave as big of a scar and have faster recovery times.
@@ -170,26 +189,5 @@
 <img src="download.jpeg" alt="bottom banner" width="1400" height="400">
     <h5 style="font:arial;"><b> The University of Sydney Nano Institute, 2017 </b> </h5>
 
-<p id="totalwordcount"></p>
-    <hr>
-    <script>
-      function displaywordcount(sectionId, outputId) {
-      const text = index.html(sectionId). textContext;
-      const wordArray = text.trim().split(/\s+/);
-      const wordcount = wordArray.length;
-      return wordcount;
-      }
-      function displaytotalwordcount() {
-      const Introduction = displaywordcount("Introduction");
-      const Types of Nanorobots = displaywordcount("Types of Nanorobots");
-      const How do Nanorobots navigate = displaywordcount("How do Nanorobots navigate");
-      const How are Nanobots powered = displaywordcount("How are Nanobots powered");
-      const Uses of Nanorobots = displaywordcount("Uses of Nanorobots");
-      const Problems and challenges faced = displaywordcount("Problems and challenges faced");  
-      const  Conclusion = displaywordcount(" Conclusion");
-      const totalwordcount = Introduction + Types of Nanorobots + How do Nanorobots navigate + How are Nanobots powered + Uses of Nanorobots + Problems and challenges faced + Conclusion;
-      index.html("totalwordcount").innerText = 'Total Word Count: ${totalwordcount}':
-      }
-      window.onload = displaytotalwordcount;
     </script>
 </html>
