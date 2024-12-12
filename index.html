@@ -180,9 +180,14 @@
       return wordcount;
       }
       function displaytotalwordcount() {
-      const Introductioncount = displaywordcount("Introduction_InText");
-      const Analysiscount = displaywordcount("Analysis_InText");
-      const totalwordcount = Introductioncount + Analysiscount;
+      const Introduction = displaywordcount("Introduction");
+      const Types of Nanorobots = displaywordcount("Types of Nanorobots");
+      const How do Nanorobots navigate = displaywordcount("How do Nanorobots navigate");
+      const How are Nanobots powered = displaywordcount("How are Nanobots powered");
+      const Uses of Nanorobots = displaywordcount("Uses of Nanorobots");
+      const Problems and challenges faced = displaywordcount("Problems and challenges faced");  
+      const  Conclusion = displaywordcount(" Conclusion");
+      const totalwordcount = Introduction + Types of Nanorobots + How do Nanorobots navigate + How are Nanobots powered + Uses of Nanorobots + Problems and challenges faced + Conclusion;
       index.html("totalwordcount").innerText = 'Total Word Count: ${totalwordcount}':
       }
       window.onload = displaytotalwordcount;
