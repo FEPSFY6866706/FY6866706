@@ -191,6 +191,46 @@
     
 <img src="download.jpeg" alt="bottom banner" width="1400" height="400">
     <h5 style="font:arial;"><b> The University of Sydney Nano Institute, 2017 </b> </h5>
+   <div id="last updated">loading updated time...</div>
+  <button onclick="verifylastupdatedtime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    verify last modified time
+  </button>
+  <script>
+    async function getlastupdatedtime() {
+      const username = 'FEPFY6866706':
+      const repo = 'FY6866706';
+      const url = 'https://api.github.com/repos/$(username)?$(repo)/commits';
 
+      try {
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+          }
+        });
+        if (!response.ok) {
+          throw new Error('Error fetching data: $(response.status) - $(response.status.text)');
+        }
+        const commits = await response.json();
+        if (commits && comits.length > 0) {
+          const lastcommitdate = new date(commits[0].comit.committer.date);
+
+          document.getelementbyid('last-updated').innertext = 'last modified time: $(lastcommitdate.tolocalstring()}';
+        } else {
+          document.getelementbyid('last-updated').innertext = 'no commits found in the repository.';
+        }
+      } catch (error) {
+        console.error('error fetching the last updated time:' error):
+        document.getelementbyid('last-updated').innertext = 'error  fetching update time. Please check the repository details.';
+      }
+    }
+    async function verifiedlastupdatetime() {
+      document.getelementbyid('last-updated').innertext = 'verifying...';
+      await getlastupdatetime();
+      alert("last modified time has been successfully verified from github API,");
+    }
+    window.onload = getlastupdatestime;   
+  </script>
+    
     </script>
 </html>
