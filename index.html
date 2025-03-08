@@ -28,23 +28,7 @@
      <link  rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
      </style>
   <head>
- <p id="totalwordcount"></p>
-    <hr>
-    <script>
-      function displaywordcount(sectionId, outputId) {
-      const text = document.getElementById(sectionId). textContext;
-      const wordArray = text.trim().split(/\s+/);
-      const wordCount = wordArray.length;
-      return wordCount;
-      }
-      function displayTotalWordCount() {
-      const IntroductionCount = displayWordCount("Introduction_InText");
-      const AnalysisCount = displayWordCount("Analysis_InText");
-      const totalWordCount = IntroductionCount + AnalysisCount
-      return wordCount;
-      }
-      window.onLoad =displayTotalWordCount;
-    </script> 
+
       
   <!table of contents>
     <table>
@@ -84,46 +68,55 @@
       <h3 id="Abstract">Abstract</h3>
     </Abstract>
     <p>
-    <h4 style="font-family:arial;"><b>Nanobots are tiny machines created to carry out tasks on a nanoscale within the human body, these robots have a potential to deliver targeted drugs therapies, perform minimally invasive procedures, and improve efficiency in treatments for diseases such as cancer and diabetes.
-      There are four main types of nanobots that are powered through various methods. 
-      Despite their promise they face challenges due to the excessive cost, immune response, and current materials available.
-      However, with ongoing investigations and advancements in technology many issues are slowly being solved. 
-      With more research and funding nanorobots could transform modern healthcare providing new, less invasive treatments for diseases. </b></h4>
+    <h4 style="font-family:arial;"><b>Nanorobots are microscopic machines designed to perform tasks at the nanoscale within the human body. 
+    These advanced devices have the potential to revolutionize medicine by enabling targeted drug delivery, facilitating minimally invasive procedures, and enhancing treatment efficacy for diseases such as cancer and diabetes.
+    There are four primary types of nanorobots, each powered by different mechanisms. However, despite their significant potential, they face several challenges, including high production costs, immune system responses, and limitations in available materials.
+    Ongoing research and technological advancements are gradually addressing these obstacles. With continued investment and innovation, nanorobots could redefine modern healthcare by offering novel, less invasive therapeutic approaches for various diseases.. </b></h4>
     </p>
     
     <Introduction>
       <h3 id="Introduction">Introduction</h3>
+      <pre id="Introduction">
     </Introduction>
     <p>
-    <h4 style="font-family:arial;"><b> Nanorobots or nanobots are extremely small robots typically 50-100nm wide.
-      They are currently being assessed to carry out tasks and procedures on human bodies on a nanoscale that doctors will not be able to complete, enabling medical innervations that would be impossible or too invasive for doctors to perform.
-      By using nanobots procedures will not leave as big of a scar and have faster recovery times.
-      Doctors and scientists hope these bots will begin to inhabit our bodies as early as 2030.   </b></h4>
+    <h4 style="font-family:arial;"><b> Nanorobots, also known as nanobots, are microscopic robots typically measuring between 50 and 100 nanometers in width.
+      They are currently being explored for their potential to perform complex medical procedures at the nanoscale—tasks that would be impossible or too invasive for human surgeons to execute.
+      By integrating nanobots into medical treatments, procedures could become significantly less invasive, resulting in minimal scarring and faster recovery times.
+      Researchers and medical professionals anticipate that these advanced robotic systems could be introduced into clinical practice as early as 2030, potentially transforming the future of healthcare.   </b></h4>
     </p>
     
    <Types of Nanorobots>
       <h3 id="Types of Nanorobots">Types of Nanorobots</h3>
+     <pre id="Types of Nanorobots">
    </Types of Nanorobots> 
    <p>
    <h4 style="font-family:arial;"><b> Nanobots fall into one of four categories:  </b></h4>
-   <h4 style="font-family:arial;"><b> Cars - Nanorobotic ‘cars’ are the most advanced nanodevice to date. They can move using chemical and electromagnetic catalysts however the motors that drive the cars need to be controlled to steer the car.  </b></h4>
-   <h4 style="font-family:arial;"><b> Motors - Motors use the energy created from the change in movement of the molecules around them.  </b></h4>
-   <h4 style="font-family:arial;"><b> Shuttles - Shuttles can transport specific drugs to targeted areas in the body. Diseased areas usually have specific chemical or Ph markers so when the shuttle senses the corrected area it knows to release the drug. </b></h4> 
-   <h4 style="font-family:arial;"><b> Switches- Nanobot switches are either in an ‘on’ or ‘off’ state, they can be affected by heat, chemicals, magnetic fields, or enzymes. (<a href="https://www.sciencedirect.com/topics/engineering/nanobots">	,Nanobots - an overview | ScienceDirect Topics</a>  , M. Mehta, K. Subramani, in Emerging Nanotechnologies in Dentistry, 2012)  </b></h4>
-   <h4 style="font-family:arial;"><b> Typically made from carbon-based materials in a diamond structure, they are durable and lightweight which gives it the strength to move around our bodies. They also have a super smooth surface area which will make it less likely to be attacked by antibodies.  </b></h4>
+   <h4 style="font-family:arial;"><b> Cars - Nanorobotic "cars" represent the most advanced nanodevices developed to date.
+     These microscopic machines are capable of movement through the use of chemical and electromagnetic catalysts.
+     However, precise control over their motion remains a challenge, as the motors that propel these nanorobotic cars must be carefully regulated to enable accurate steering and navigation.  </b></h4>
+   <h4 style="font-family:arial;"><b> Motors -The motors of nanorobotic cars harness energy generated by the movement of surrounding molecules, converting these dynamic changes into propulsion.
+     This process enables controlled motion at the nanoscale, though precise navigation remains a key challenge in their development. </b></h4>
+   <h4 style="font-family:arial;"><b> Shuttles - Shuttles can transport specific drugs to targeted areas in the body.
+     Diseased areas usually have specific chemical or Ph markers so when the shuttle senses the corrected area it knows to release the drug. </b></h4> 
+   <h4 style="font-family:arial;"><b> Switches- Nanobot switches operate in a binary "on" or "off" state and can be activated or deactivated by various external stimuli, including heat, chemical signals, magnetic fields, or enzymes.
+     These switches play a crucial role in controlling nanobot functions, enabling precise regulation of their activity within biological and medical applications. (<a href="https://www.sciencedirect.com/topics/engineering/nanobots">	,Nanobots - an overview | ScienceDirect Topics</a>  , M. Mehta, K. Subramani, in Emerging Nanotechnologies in Dentistry, 2012)  </b></h4>
+   <h4 style="font-family:arial;"><b> Typically constructed from carbon-based materials arranged in a diamond-like structure, nanobots are both durable and lightweight, providing the necessary strength for movement within the human body.
+     Additionally, their ultra-smooth surface reduces the likelihood of detection and attack by the immune system, enhancing their effectiveness in medical applications.  </b></h4>
    </p>
     
    <How do Nanorobots navigate>
       <h3 id="How do Nanorobots navigate">How do Nanorobots navigate</h3>
+     <pre id="How do Nanorobots navigate">
    </How do Nanorobots navigate>
    <p>
-   <h4 style="font-family:arial;"><b> Magnetic Resonance Imaging (MRI) devices are used to track and position nanobots.
-     They are coated with biocompatible materials to ensure they do not cause toxicity in the body and ensure they can be easily detected in an MRI scanner. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8154323/"> ,Magnetically Driven Micro and Nanorobots - PMC  </a> Huaijuan Zhou, Carmen C Mayorga-Martinez, Salvador Pané , Li Zhang §, Martin Pumera , 2021)
+   <h4 style="font-family:arial;"><b>Magnetic Resonance Imaging (MRI) devices are utilized to track and precisely position nanobots within the body.
+     To enhance their biocompatibility and minimize toxicity, nanobots are coated with specialized materials that not only prevent adverse biological reactions but also improve their visibility under MRI scanning, ensuring accurate monitoring and control during medical applications.. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8154323/"> ,Magnetically Driven Micro and Nanorobots - PMC  </a> Huaijuan Zhou, Carmen C Mayorga-Martinez, Salvador Pané , Li Zhang §, Martin Pumera , 2021)
      Once in the body, an external magnetic field generated by the MRI scanner will navigate the nanobot around the body.  </b></h4>
    </p>
 
    <How are Nanobots powered>
       <h3 id="How are Nanobots powered">How are Nanobots powered</h3>
+      <pre id="How are Nanobots powered">
    </How are Nanobots powered>
    <p>
    <h4 style="font-family:arial;"><b> There are many ways a nanobot is powered and more ways are still being created now most fall under one of three categories: </b></h4>
@@ -137,33 +130,42 @@
     
    <Uses of Nanorobots>
       <h3 id="Uses of Nanorobots">Uses of Nanorobots</h3>
+     <pre id="Uses of Nanorobot">
    </Uses of Nanorobots>
    <p>
-   <h4 style="font-family:arial;"><b> Doctors and researchers believe that nanobots will play a pivotal role in the treatment for cancees,r, gene therapy, and diseases such as diabet AIDS, cystic fibrosis, and heart diseases.
-     Many investigations are going into creating cures for these, however they are slow, finding enough funding and the correct materials is proving to be a huge challenge.
-     Nonetheless, significant breakthroughs with cancer treatments and surgeries have been achieved. Currently, they are programmed to recognize twelve types of cancer cells and can perform advanced biomedical interventions with minimally invasive surgeries to help improve treatment efficiency.(<a href="https://pubs.aip.org/aip/acp/article/2985/1/020003/3278208/Nanobots-in-medical-field-A-comprehensive-review">,020003_1_5.0204674.pdf Vinit Joshi</a>, Nupur Avasare, Rutwik Bhangale, 2024)
-     The materials used in nanobots influence their functionality and the body's response to them.
-     During testing researchers found that antibodies would attack the nanobots stopping them from working, so to lessen this problem the nanobots have a super-smooth surface and are made from a carbon-based material this has increase the chances of the treatment working. 
-     It has also begun to work as a drug carrier to treat tumors, it carries and transports the drugs to a targeted area and with a controlled release it will deliver the drug.
-     Nanorobots are quickly finding many uses in medicine and will prove to be a significant help in treatments of diseases.  </b></h4>
+   <h4 style="font-family:arial;"><b>Doctors and researchers anticipate that nanobots will play a pivotal role in the treatment of cancer, gene therapy, and diseases such as diabetes, AIDS, cystic fibrosis, and heart disease.
+     While extensive research is being conducted to develop effective nanobot-based therapies, progress remains slow due to challenges in securing adequate funding and sourcing suitable materials.
+     Despite these obstacles, significant breakthroughs have been made, particularly in cancer treatment and surgical applications.
+     Currently, nanobots are programmed to identify twelve types of cancer cells and are capable of performing advanced biomedical interventions, including minimally invasive surgeries, to enhance treatment efficacy <a href="https://pubs.aip.org/aip/acp/article/2985/1/020003/3278208/Nanobots-in-medical-field-A-comprehensive-review">020003_1_5.0204674.pdf Vinit Joshi</a> Nupur Avasare, Rutwik Bhangale, 2024 </b></h4>
+     The materials used in nanobot construction play a critical role in their functionality and biocompatibility.
+     During testing, researchers observed that antibodies would attack nanobots, impairing their effectiveness.
+     To mitigate this issue, nanobots are designed with an ultra-smooth surface and are composed of carbon-based materials, which increase their chances of successfully delivering treatment.
+     Additionally, nanorobots have demonstrated potential as targeted drug carriers, transporting and releasing therapeutic agents in a controlled manner to treat tumors.
+     As research advances, nanorobots are rapidly finding diverse applications in medicine and are expected to significantly improve disease treatment and patient outcomes.  </b></h4>
    </p>
     <img src="OIP.jpeg" alt="nanobot picture" width="400" height="300">
     <h5 style="font:arial;"><b>Nanobots are currently disrupting the biomedicine sector, with developments in cancer diagnosis and drug delivery.By Azonano,2023</b></h5>
    
     <Problems and challenges faced>
       <h3 id="Problems and challenges faced">Problems and challenges faced</h3>
+       <pre id="Problems and challenges faced">
    </Problems and challenges faced>
    <p>
-   <h4 style="font-family:arial;"><b> Nanobots are becoming more popular in the medical field but that does not come without challenges.
-     They are expensive to build/research and the materials needed are not available now.
-     Other challenges are with the human body itself attacking the nanobots, the immune system is designed to attack any foreign bodies to protect us and when injecting nanobots they get attacked and destroyed before carrying out their task, however doctors have found ways to reduce this but it is an ongoing problem that is currently being solved. 
-     Another problem faced is the nanobots getting affected by gravity.
-     The term micro-g is a synonym for weightlessness or zero-g, indicating there is no gravity; however, there is a gravitational force acting on it, it is just small. 
-     This force, even though it is small, is still strong enough to affect the way nanobots travel in our bodies. (<a href=" http://article.sapub.org/10.5923.j.biophysics.20170704.02.html">, Microgravity and Nanomaterials </a> Melissa Palma-Jiménez, Yendry Corrales Ureña, Carlos Villalobos Bermúdez, José Roberto Vega Baudrit ) </b></h4>
+   <h4 style="font-family:arial;"><b>Nanobots are gaining increasing attention in the medical field due to their potential to revolutionize treatment methods.
+     However, their development and implementation come with significant challenges.
+     One of the primary obstacles is the high cost of research and production, as well as the limited availability of suitable materials.
+     Additionally, the human immune system presents a major hurdle, as it is designed to detect and eliminate foreign bodies, including nanobots.
+     Upon injection, nanobots are often attacked and destroyed before they can complete their intended functions.
+     While researchers have developed methods to reduce immune responses, this remains an ongoing challenge requiring further refinement.
+     Another issue is the influence of gravitational forces on nanobot movement.
+     The term microgravity (micro-g) refers to an environment of near-weightlessness, where gravitational forces are present but minimal.
+     Despite its small magnitude, this force can still affect the way nanobots navigate within the human body, posing difficulties for precise control and targeted delivery.
+     While these challenges persist, continued advancements in nanotechnology and biomedical engineering are gradually addressing these limitations, bringing nanobot-based treatments closer to widespread clinical application. (<a href=" http://article.sapub.org/10.5923.j.biophysics.20170704.02.html">, Microgravity and Nanomaterials </a> Melissa Palma-Jiménez, Yendry Corrales Ureña, Carlos Villalobos Bermúdez, José Roberto Vega Baudrit ) </b></h4>
    </p>
     
    <Conclusion>
       <h3 id="Conclusion">Conclusion</h3>
+      <pre id="Conclusion">
    </Conclusion>
   <p>
   <h4 style="font-family:arial;"><b> In conclusion, nanorobots hold immense potential to revolutionize the medical field.
@@ -191,7 +193,33 @@
     
 <img src="download.jpeg" alt="bottom banner" width="1400" height="400">
     <h5 style="font:arial;"><b> The University of Sydney Nano Institute, 2017 </b> </h5>
-   <div id="last updated">loading updated time...</div>
+   
+    <p id="totalwordcount"></p>
+    <hr>
+    <script>
+      function displaywordcount(sectionid, outputid) {
+        const text = document.elementbyid(sectionid).textcontent;
+        const wordarray = text.trim().split(/\s+/);
+        const wordcount = wordarray.length:
+        return wordcount:
+      }
+        function displaytotalwordcount() {
+          const introductioncount = displaywordcount ("Introduction");
+          const TypesofNanorobotscount = displaywordcount ("Types of Nanorobots");
+          const HowdoNanorobotsnavigatecount = displaywordcount ("How do Nanorobots navigate");
+          const HowareNanobotspoweredcount = displaywordcount ("How are Nanobots powered");
+          const UsesofNanorobotscount = displaywordcount ("Uses of Nanorobots");
+          const Problemsandchallengesfacedcount = displaywordcount ("Problems and challenges faced");
+          const Conclusioncount = displaywordcount ("Conclusion");
+
+          const totalwordcount = introductioncount +  TypesofNanorobotscount + HowdoNanorobotsnavigatecount + HowareNanobotspoweredcount +  UsesofNanorobotscount + Problemsandchallengesfacedcount + Conclusioncount;
+          document.getbyid("totalwordcount").innertext = 'total word count: ${totalwordcount};
+        }
+        window.onload = displaytotalwordcount:
+    </script>
+
+          
+    <div id="last updated">loading updated time...</div>
   <button onclick="verifylastupdatedtime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
     verify last modified time
   </button>
@@ -213,7 +241,7 @@
         }
         const commits = await response.json();
         if (commits && comits.length > 0) {
-          const lastcommitdate = new date(commits[0].comit.committer.date);
+          const lastCommitDate = new date(commits[0].comit.committer.date);
 
           document.getelementbyid('last-updated').innertext = 'last modified time: $(lastcommitdate.tolocalstring()}';
         } else {
