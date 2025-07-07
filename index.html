@@ -119,14 +119,12 @@
     </table>
   
   <div class="content-section" id="Abstract_section"> <h3 id="Abstract">Abstract</h3>
-      <pre> id="Abstract_in text"></pre>
     <p>
     Nanorobots are microscopic machines designed to perform tasks at the nanoscale within the human body. These advanced devices have the potential to revolutionise medicine by enabling targeted drug delivery, performing minimally invasive procedures, and enhancing treatment efficacy for diseases such as cancer and diabetes. There are four primary types of nanorobots, each powered by different mechanisms. However, despite their significant potential, they face several challenges, including high production costs, immune system responses, and limitations in available materials. Ongoing research and technological advancements are gradually addressing these obstacles. With continued investment and innovation, nanorobots could redefine modern healthcare by offering more effective, less invasive approaches for various diseases.
     </p>
     </div>
     
   <div class="content-section" id="Introduction_section"> <h3 id="Introduction">Introduction</h3>
-      <pre id="Introduction_in text"></pre>
     <p>
     Nanorobots, also known as nanobots, are microscopic robots typically measuring between 50 and 100 nanometers in width. They are currently being explored for their potential to perform complex medical procedures at the nanoscale—tasks that would be impossible or too invasive for human surgeons to execute. By integrating nanobots into medical treatments, procedures could become significantly less invasive, resulting in minimal scarring and faster recovery times. Researchers and medical professionals anticipate that these advanced robotic systems could be introduced into clinical practice as early as 2030, potentially transforming the future of healthcare. 
     </p>
@@ -204,40 +202,39 @@
 <img src="download.jpeg" alt="bottom banner" width="1400" height="400">
     <h5 style="font:arial;"><b> The University of Sydney Nano Institute, 2017 </b> </h5>
    
-    <p id="totalwordcount"></p>
-    <hr>
-    <script>
-      function displaywordcount(sectionid, outputid) {
-        const text = document.elementbyid(sectionid).textcontent;
-        const wordarray = text.trim().split(/\s+/);
-        const wordcount = wordarray.length:
-        return wordcount:
-      }
-        function displaytotalwordcount() {
-          const introductioncount = displaywordcount ("Introduction");
-          const TypesofNanorobotscount = displaywordcount ("Types of Nanorobots");
-          const HowdoNanorobotsnavigatecount = displaywordcount ("How do Nanorobots navigate");
-          const HowareNanobotspoweredcount = displaywordcount ("How are Nanobots powered");
-          const UsesofNanorobotscount = displaywordcount ("Uses of Nanorobots");
-          const Problemsandchallengesfacedcount = displaywordcount ("Problems and challenges faced");
-          const Conclusioncount = displaywordcount ("Conclusion");
-
-          const totalwordcount = introductioncount +  TypesofNanorobotscount + HowdoNanorobotsnavigatecount + HowareNanobotspoweredcount +  UsesofNanorobotscount + Problemsandchallengesfacedcount + Conclusioncount;
-          document.getbyid("totalwordcount").innertext = 'total word count: ${totalwordcount};
+   <script>
+        function displaywordcount(sectionid) {
+            const textElement = document.getElementById(sectionid);
+            if (!textElement) {
+                console.warn(`Element with ID '${sectionid}' not found for word count.`);
+                return 0;
+            }
+            const text = textElement.textContent;
+            const wordarray = text.trim().split(/\s+/);
+            return wordarray.length;
         }
-        window.onload = displaytotalwordcount:
-    </script>
 
-          
-    <div id="last updated">loading updated time...</div>
-  <button onclick="verifylastupdatedtime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    verify last modified time
-  </button>
-  <script>
-    async function getlastupdatedtime() {
-      const username = 'FEPFY6866706':
-      const repo = 'FY6866706';
-      const url = 'https://api.github.com/repos/$(username)?$(repo)/commits';
+     
+ function displaytotalwordcount() {
+            const abstractCount = displaywordcount("Abstract_section"); 
+            const introductionCount = displaywordcount("Introduction_section");
+            const typesCount = displaywordcount("Types_of_Nanorobots_section");
+            const navigateCount = displaywordcount("How_do_Nanorobots_navigate_section");
+            const poweredCount = displaywordcount("How_are_Nanobots_powered_section");
+            const usesCount = displaywordcount("Uses_of_Nanorobots_section");
+            const problemsCount = displaywordcount("Problems_and_challenges_faced_section");
+            const conclusionCount = displaywordcount("Conclusion_section");
+
+            const totalWordCount = abstractCount + introductionCount + typesCount + navigateCount + poweredCount + usesCount + problemsCount + conclusionCount;
+            document.getElementById("totalwordcount").innerText = `Total word count: ${totalWordCount}`; 
+        }
+
+        window.addEventListener('load', displaytotalwordcount);
+
+        async function getlastupdatedtime() {
+            const username = 'FEPFY6866706';
+            const repo = 'FY6866706';
+            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
 
       try {
         const response = await fetch(url, {
@@ -246,29 +243,35 @@
             'Accept': 'application/vnd.github.v3+json',
           }
         });
-        if (!response.ok) {
-          throw new Error('Error fetching data: $(response.status) - $(response.status.text)');
-        }
-        const commits = await response.json();
-        if (commits && comits.length > 0) {
-          const lastCommitDate = new date(commits[0].comit.committer.date);
+      if (!response.ok) {
+                    throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+                }
+                const commits = await response.json();
+                if (commits && commits.length > 0) {
+                    const lastCommitDate = new Date(commits[0].commit.committer.date); // Corrected property name "commit"
 
-          document.getelementbyid('last-updated').innertext = 'last modified time: $(lastcommitdate.tolocalstring()}';
-        } else {
-          document.getelementbyid('last-updated').innertext = 'no commits found in the repository.';
+                    document.getElementById('last-updated').innerText = `Last modified time: ${lastCommitDate.toLocaleString()}`; // Corrected ID and template literal
+                } else {
+                    document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+                }
+            } catch (error) {
+                console.error('Error fetching the last updated time:', error);
+                document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+            }
         }
-      } catch (error) {
-        console.error('error fetching the last updated time:' error):
-        document.getelementbyid('last-updated').innertext = 'error  fetching update time. Please check the repository details.';
-      }
-    }
-    async function verifiedlastupdatetime() {
-      document.getelementbyid('last-updated').innertext = 'verifying...';
-      await getlastupdatetime();
-      alert("last modified time has been successfully verified from github API,");
-    }
-    window.onload = getlastupdatestime;   
-  </script>
-    
+     
+ async function verifyLastUpdatedTime() {
+            document.getElementById('last-updated').innerText = 'Verifying...';
+            await getlastupdatedtime();
+            alert("Last modified time has been successfully verified from GitHub API.");
+        }
+
+        window.addEventListener('load', getlastupdatedtime);
     </script>
+    
+    <div id="last-updated">Loading updated time...</div> <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+        Verify last modified time
+    </button>
+
+</body>
 </html>
