@@ -185,7 +185,7 @@
         
  <div class="content-section" id="References_section">
       <h3 id="References">References</h3>
-  <div class="references-list"> <h4 style="font-family:calibri;"><b> >
+  <div class="references-list"> <h4 style="font-family:calibri;"><b>
    <h4 style="font-family:calbri;"><b> <a href="https://www.sciencedirect.com/topics/engineering/nanobots">	Nanobots - an overview | ScienceDirect Topics</a>  , M. Mehta, K. Subramani, in Emerging Nanotechnologies in Dentistry, 2012  </b></h4>
    <h4 style="font-family:calbri;"><b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8154323/">Magnetically Driven Micro and Nanorobots - PMC  </a> Huaijuan Zhou, Carmen C Mayorga-Martinez, Salvador Pané , Li Zhang §, Martin Pumera , 2021 </b></h4>
    <h4 style="font-family:calbri;"><b> <a href=" https://www.sciencedirect.com/science/article/pii/B9780128178300000011">Introduction to Active, Smart, and Intelligent Nanomaterials for Biomedical Application – ScienceDirect </a> Jyoti Ahlawat MS, Mahesh Narayan PhD, 2020  </b></h4>
@@ -198,9 +198,6 @@
    <video src="6866706video.mp4" alt="video" width="800" height="450"></video>
    <h7 style="font-family:arial;"><b> <a href="6866706video.mp4"> 6866706 powerpoint </a> </b> </h7> <img src="download.jpeg" alt="bottom banner"> <h5 style="font-family:arial;"><b> The University of Sydney Nano Institute, 2017 </b> </h5> <p id="totalwordcount"></p>
     <hr>
-    
-<img src="download.jpeg" alt="bottom banner" width="1400" height="400">
-    <h5 style="font:arial;"><b> The University of Sydney Nano Institute, 2017 </b> </h5>
    
    <script>
         function displaywordcount(sectionid) {
@@ -240,6 +237,7 @@
         const response = await fetch(url, {
           method: 'GET',
           headers: {
+            'User-Agent': 'YourAppNameOrUsername',
             'Accept': 'application/vnd.github.v3+json',
           }
         });
@@ -248,9 +246,9 @@
                 }
                 const commits = await response.json();
                 if (commits && commits.length > 0) {
-                    const lastCommitDate = new Date(commits[0].commit.committer.date); // Corrected property name "commit"
+                    const lastCommitDate = new Date(commits[0].commit.committer.date);
 
-                    document.getElementById('last-updated').innerText = `Last modified time: ${lastCommitDate.toLocaleString()}`; // Corrected ID and template literal
+                    document.getElementById('last-updated').innerText = `Last modified time: ${lastCommitDate.toLocaleString()}`; 
                 } else {
                     document.getElementById('last-updated').innerText = 'No commits found in the repository.';
                 }
