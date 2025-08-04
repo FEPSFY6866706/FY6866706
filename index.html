@@ -209,7 +209,7 @@
   </button>
   <script>
     async function getlastupdatedtime() {
-      const username = 'FEPFY6866706':
+      const username = 'FEPFY6866706';
       const repo = 'FY6866706';
       const url = 'https://api.github.com/repos/$(username)?$(repo)/commits';
 
@@ -227,17 +227,17 @@
         if (commits && comits.length > 0) {
           const lastCommitDate = new date(commits[0].comit.committer.date);
 
-          document.getelementbyid('last-updated').innertext = 'last modified time: $(lastcommitdate.tolocalstring()}';
+          document.getElementById('last-updated').innerText = 'last modified time: $(lastcommitdate.tolocalstring()}';
         } else {
-          document.getelementbyid('last-updated').innertext = 'no commits found in the repository.';
+          document.getElementById('last-updated').innerText = 'no commits found in the repository.';
         }
       } catch (error) {
         console.error('error fetching the last updated time:' error):
-        document.getelementbyid('last-updated').innertext = 'error  fetching update time. Please check the repository details.';
+        document.getelementById('last-updated').innerText = 'error  fetching update time. Please check the repository details.';
       }
     }
     async function verifiedlastupdatetime() {
-      document.getelementbyid('last-updated').innertext = 'verifying...';
+      document.getElementById('last-updated').innerText = 'verifying...';
       await getlastupdatetime();
       alert("last modified time has been successfully verified from github API,");
     }
