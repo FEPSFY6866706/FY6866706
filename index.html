@@ -38,11 +38,9 @@
        font-family: Arial, sans-serif;
        colour: #333;
 
-      
-  <!table of contents>
     <table>
       <tr>
-        <th><h3> Table of contents</h3></th>
+        <th><h3 Table of contents</h3></th>
       </tr>
       <tr>
         <td><a href="#Abstract">Abstract</td>
@@ -207,7 +205,6 @@
   <button onclick="verifylastupdatedtime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
     verify last modified time
   </button>
-  <!--script-->
     async function getlastupdatedtime() {
       const username = 'FEPFY6866706';
       const repo = 'FY6866706';
@@ -233,7 +230,7 @@
         }
       } catch (error) {
         console.error('error fetching the last updated time:' error):
-        document.getelementById('last-updated').innerText = 'error  fetching update time. Please check the repository details.';
+        document.getElementById('last-updated').innerText = 'error  fetching update time. Please check the repository details.';
       }
     }
     async function verifiedlastupdatetime() {
@@ -241,8 +238,8 @@
       await getlastupdatetime();
       alert("last modified time has been successfully verified from github API,");
     }
-    window.onload = getlastupdatestime;   
+    window.onload = getlastupdatedtime;   
   </script>
     
-    <!--/script-->
+
 </html>
