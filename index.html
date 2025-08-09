@@ -1,237 +1,335 @@
-   
- <!DOCTYPE html>
 
+<!DOCTYPE html>
 <html>
-  <head>
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG0018 Computer Laboratory 2024/25</title>
+    <style>
+        /* Table Styling */
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 30%; /* Adjust as needed */
+            margin-bottom: 20px;
+        }
 
-    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300"> 
-      <h1><b>ENG0018 Computer Laboratory 2024/25</b></h1>
-      <h2>Student URN6866706</h2> 
-   <hr>
-   
-    <h2 style="font-family:calibri;"><b>How are Nanorobots revolutionising modern medicine?</b></h2> 
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        /* Content Section Styling */
+        .content-section {
+            border: 1px solid #c0c0c0;
+            padding: 20px;
+            margin-bottom: 30px;
+            width: 90%; /* Responsive width */
+            max-width: 900px; /* Max width for larger screens */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            background-color: #fcfcfc;
+            line-height: 1.6; /* For better readability */
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Basic image styling for responsiveness */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* To remove extra space below images */
+            margin: 0 auto; /* Center images */
+        }
+
+        /* Video styling for responsiveness */
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Heading styles */
+        h1, h2, h3, h4, h5 {
+            font-family: 'Calibri', sans-serif; /* Using a more common fallback */
+            color: #222;
+        }
+
+        /* Horizontal rule spacing */
+        hr {
+            margin: 20px 0;
+        }
+        /* Style for the verify button to ensure it looks good */
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner Image -->
+    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
+    
+    <!-- Page Title and Student Info -->
+    <h1><b>ENG0018 Computer Laboratory 2024/25</b></h1>
+    <h2>Student URN6866706</h2>
     <hr>
 
-<!style for tables>
-        <style>
-              table {
-                font-family: arial, sans-serif;
-                border-collapse: collapse;
-                width: 30%;
-               
-              }
-              td, th {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-              }
-              tr:nth-child(even) {
-                background-color: #dddddd;
-              }    
-       </style> 
+    <!-- Main Article Title -->
+    <h2 style="font-family: 'Calibri', sans-serif;"><b>How are Nanorobots revolutionising modern medicine?</b></h2>
+    <hr>
 
-<style>
-p.ex1 {
-margin-left: 250px;
-}
-</style>
-   
-
-      
-
+    <!-- Table of Contents -->
+    <h3>Table of contents</h3>
     <table>
-      <tr>
-        <th><h3> Table of contents</h3></th>
-      </tr>
-      <tr>
-        <td><a href="#Abstract">Abstract</td>
-      </tr>
-      <tr>
-        <td><a href="#Introduction">Introduction</td>
-      </tr>
-      <tr>
-        <td><a href="#Types of Nanorobots">Types of nanorobots</td>
-      </tr>
-      <tr>
-        <td><a href="#How do Nanorobots navigate?">How do Nanorobots navigate?</td>
-      </tr>
-      <tr>
-        <td><a href="#How are Nanobots powered?">How are Nanobots powered?</td>
-      </tr>
-      <tr>
-        <td><a href="#Uses of Nanorobots">Uses of Nanorobots</td>
-      </tr>
-      <tr>
-        <td><a href="#Problems and challenges faced">Problems and challenges faced</td>
-      </tr>
-      <tr>
-        <td><a href="#Conclusion">Conclusion</td>
-      </tr>
-      <tr>
-        <td><a href="#References">References</td>
-      </tr>
+        <tr>
+            <td><a href="#Abstract">Abstract</a></td>
+        </tr>
+        <tr>
+            <td><a href="#Introduction">Introduction</a></td>
+        </tr>
+        <tr>
+            <td><a href="#Types of Nanorobots">Types of nanorobots</a></td>
+        </tr>
+        <tr>
+            <td><a href="#How do Nanorobots navigate?">How do Nanorobots navigate?</a></td>
+        </tr>
+        <tr>
+            <td><a href="#How are Nanobots powered?">How are Nanobots powered?</a></td>
+        </tr>
+        <tr>
+            <td><a href="#Uses of Nanorobots">Uses of Nanorobots</a></td>
+        </tr>
+        <tr>
+            <td><a href="#Problems and challenges faced">Problems and challenges faced</a></td>
+        </tr>
+        <tr>
+            <td><a href="#Conclusion">Conclusion</a></td>
+        </tr>
+        <tr>
+            <td><a href="#References">References</a></td>
+        </tr>
     </table>
-  
-   <hr>
-     
-      <h3 id="Abstract">Abstract</h3>
-      <p id="Abstract_intext">
-      
-    Nanorobots are microscopic machines designed to perform tasks at the nanoscale within the human body. These advanced devices have the potential to revolutionise medicine by enabling targeted drug delivery, performing minimally invasive procedures, and enhancing treatment efficacy for diseases such as cancer and diabetes. There are four primary types of nanorobots, each powered by different mechanisms. However, despite their significant potential, they face several challenges, including high production costs, immune system responses, and limitations in available materials. Ongoing research and technological advancements are gradually addressing these obstacles. With continued investment and innovation, nanorobots could redefine modern healthcare by offering more effective, less invasive approaches for various diseases.
-    </p>
-  
-        <h3 id="Introduction">Introduction</h3>
-      <p id="IntroInText">
-    Nanorobots, also known as nanobots, are microscopic robots typically measuring between 50 and 100 nanometers in width. They are currently being explored for their pote<div class="content-section" id="Introduction_section">ntial to perform complex medical procedures at the nanoscale—tasks that would be impossible or too invasive for human surgeons to execute. By integrating nanobots into medical treatments, procedures could become significantly less invasive, resulting in minimal scarring and faster recovery times. Researchers and medical professionals anticipate that these advanced robotic systems could be introduced into clinical practice as early as 2030, potentially transforming the future of healthcare. 
-    </p>
 
-
-     
-      <h3 id="Types of Nanorobots">Types of Nanorobots</h3>
-      <p id="TypesInText">
-    Nanobots fall into one of four categories: 
-     Cars - Nanorobotic "cars" represent the most advanced nanodevices developed to date. These microscopic machines are capable of movement through the use of chemical and electromagnetic catalysts. However, precise control over their motion remains a challenge, as the motors that propel these nanorobotic cars must be carefully regulated to enable accurate steering and navigation.
-     Motors -The motors of nanorobotic cars harness energy generated by the movement of surrounding molecules, converting these dynamic changes into propulsion. This process enables controlled motion at the nanoscale, though precise navigation remains a key challenge in their development. 
-     Shuttles - Shuttles can transport specific drugs to targeted areas in the body.Diseased areas usually have specific chemical or Ph markers so when the shuttle senses the corrected area it knows to release the drug. 
-     Switches- Nanobot switches operate in a binary "on" or "off" state and can be activated or deactivated by various external stimuli, including heat, chemical signals, magnetic fields, or enzymes. These switches play a crucial role in controlling nanobot functions, enabling precise regulation of their activity within biological and medical applications. (<a href="https://www.sciencedirect.com/topics/engineering/nanobots">	,(Nanobots 2012)</a>Typically constructed from carbon-based materials arranged in a diamond-like structure, nanobots are both durable and lightweight, providing the necessary strength for movement within the human body. Additionally, their ultra-smooth surface reduces the likelihood of detection and attack by the immune system, enhancing their effectiveness in medical applications.  
-   </p>
-    <h3 id="How do Nanorobots navigate?">How do Nanorobots navigate?</h3>
-      <p id="navigate_inText"></p>
-   <p>
-     MRI's are utilized to track and precisely position nanobots within the body. To enhance their biocompatibility and minimize toxicity, nanobots are coated with specialised materials that prevent adverse biological reactions and improve their visibility under MRI scanning, ensuring accurate monitoring and control during medical applications. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8154323/"> (Magnetically Driven Micro and Nanorobots 2021) </a>Once in the body, an external magnetic field generated by the MRI scanner will navigate the nanobot around the body. 
-   </p>
+    <!-- Main Content Sections -->
+    <div class="content-section">
+        <h3 id="Abstract">Abstract</h3>
+        <p id="AbstractInText">
+            Nanorobots are microscopic machines designed to perform tasks at the nanoscale within the human body. These advanced devices have the potential to revolutionise medicine by enabling targeted drug delivery, performing minimally invasive procedures, and enhancing treatment efficacy for diseases such as cancer and diabetes. There are four primary types of nanorobots, each powered by different mechanisms. However, despite their significant potential, they face several challenges, including high production costs, immune system responses, and limitations in available materials. Ongoing research and technological advancements are gradually addressing these obstacles. With continued investment and innovation, nanorobots could redefine modern healthcare by offering more effective, less invasive approaches for various diseases.
+        </p>
         
-      <h3 id="How are Nanobots powered?">How are Nanobots powered?</h3>
-      <p id="powered_inText"></p>
-   <p>
-    There are many ways a nanobot is powered, more ways are still being created now. Most fall under
-    one of three categories:
-    Self-propelled machines - Self-propelled machines power themselves and have been made in shapes including spherical and conical. 
-    Fuel-propelled motors - Fuel-propelled motors operate when a particular fuel or chemical produces the energy needed to start moving.
-    Fuel-free propelled motors - Fuel-free propelled motors work through the energy created through magnetic fields or ultra sonic symbols.
-   
-    Nanobots can be powered by generators and capacitors. <a href=" https://www.sciencedirect.com/science/article/pii/B9780128178300000011"> (ScienceDirect 2020) </a>.Generators on board the nanobot use electrolytes found in the blood and are used as a chemical catalyst that when combined with nanobots creates the internal energy needed for the nanobot to work. For external power, a small fiber optic wire is attached to the device. Then pulses of light are sent through it, these pulses of electricity power can the nanobots. Additionally, magnetic fields can be used to induce electrical currents using a closed conducting loop contained within the nanobots. Ultrasonic signals are also used, employing a material called a piezoelectric membrane, which collects ultrasonic waves and transforms them into electrical power.( <a href="https://www.unite.ai/what-are-nanobots-understanding-nanobot-structure-operation-and-uses/">	(Daniel Nelson, 2020 )</a>) 
-   </p>
+        <h3 id="Introduction">Introduction</h3>
+        <p id="IntroInText">
+            Nanorobots, also known as nanobots, are microscopic robots typically measuring between 50 and 100 nanometers in width. They are currently being explored for their potential to perform complex medical procedures at the nanoscale—tasks that would be impossible or too invasive for human surgeons to execute. By integrating nanobots into medical treatments, procedures could become significantly less invasive, resulting in minimal scarring and faster recovery times. Researchers and medical professionals anticipate that these advanced robotic systems could be introduced into clinical practice as early as 2030, potentially transforming the future of healthcare.
+        </p>
 
-      <h3 id="Uses of Nanorobots">Uses of Nanorobots</h3>
-      <p id="Uses_inText"></p>
-   <p>
-     Nanobots show great promise for treating diseases like cancer, diabetes, and heart disease, along with gene therapy. While challenges like funding and material sourcing slow progress, significant breakthroughs have been made, especially in cancer and surgery. Currently, nanobots can identify twelve types of cancer cells and perform advanced, minimally invasive surgeries to enhance treatment efficacy <a href="https://pubs.aip.org/aip/acp/article/2985/1/020003/3278208/Nanobots-in-medical-field-A-comprehensive-review"> (Nanobots in medical field 2024)</a>To avoid being attacked by the immune system, they are constructed from carbon-based materials with an ultra-smooth surface, which helps them successfully deliver treatment. They also function as targeted drug carriers, precisely delivering medication to tumors. As research continues, nanobots are expected to improve disease treatment and patient outcomes significantly.
-   </p>
+        <h3 id="Types of Nanorobots">Types of Nanorobots</h3>
+        <p id="TypesInText"> </p>
+            Nanobots fall into one of four categories:
+            <p>
+            
+                    <b>Cars:</b> Nanorobotic "cars" represent the most advanced nanodevices developed to date. These microscopic machines are capable of movement through the use of chemical and electromagnetic catalysts. However, precise control over their motion remains a challenge, as the motors that propel these nanorobotic cars must be carefully regulated to enable accurate steering and navigation.
+ 
+                    <b>Motors:</b> The motors of nanorobotic cars harness energy generated by the movement of surrounding molecules, converting these dynamic changes into propulsion. This process enables controlled motion at the nanoscale, though precise navigation remains a key challenge in their development.
 
-  
-    <img src="OIP.jpeg" alt="nanobot picture" width="400" height="300">
-    <h5 style="font:arial;"><b>Nanobots are currently disrupting the biomedicine sector, with developments in cancer diagnosis and drug delivery.By Azonano,2023</b></h5>
+                    <b>Shuttles:</b> Shuttles can transport specific drugs to targeted areas in the body. Diseased areas usually have specific chemical or pH markers so when the shuttle senses the corrected area it knows to release the drug.
+            
+                    <b>Switches:</b> Nanobot switches operate in a binary "on" or "off" state and can be activated or deactivated by various external stimuli, including heat, chemical signals, magnetic fields, or enzymes. These switches play a crucial role in controlling nanobot functions, enabling precise regulation of their activity within biological and medical applications.
+                    </p>
+            
+        <p>
+            <a href="https://www.sciencedirect.com/topics/engineering/nanobots">(Nanobots 2012)</a>
+            Typically constructed from carbon-based materials arranged in a diamond-like structure, nanobots are both durable and lightweight, providing the necessary strength for movement within the human body. Additionally, their ultra-smooth surface reduces the likelihood of detection and attack by the immune system, enhancing their effectiveness in medical applications.
+        </p>
 
-      <h3 id="Problems and challenges faced">Problems and challenges faced</h3>
-      <p id="Problems_inText"></p>
-   <p>
-     Nanobots show great promise for revolutionizing medical treatments. However, their development faces significant hurdles. The high cost and scarcity of materials make production difficult.  A major challenge is the human immune system, which identifies and destroys nanobots before they can function. Researchers are working on ways to camouflage them, but this remains an ongoing issue. Microgravity, or the subtle gravitational forces within the body, can also affect nanobot movement, complicating precise control and targeted delivery. Despite these obstacles, ongoing advancements are bringing nanobot-based therapies closer to reality. <a href=" http://article.sapub.org/10.5923.j.biophysics.20170704.02.html">, (Microgravity and Nanomaterials 2021) </a> 
-   </p>
+        <h3 id="How do Nanorobots navigate?">How do Nanorobots navigate?</h3>
+        <p id="NavigateInText">
+            MRIs are utilized to track and precisely position nanobots within the body. To enhance their biocompatibility and minimize toxicity, nanobots are coated with specialised materials that prevent adverse biological reactions and improve their visibility under MRI scanning, ensuring accurate monitoring and control during medical applications. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8154323/"> (Magnetically Driven Micro and Nanorobots 2021) </a>Once in the body, an external magnetic field generated by the MRI scanner will navigate the nanobot around the body.
+        </p>
 
-      <h3 id="Conclusion">Conclusion</h3>
-      <p id="Conclusion_inText"></p>
-  <p>
-    In conclusion, nanorobots hold immense potential to revolutionize the medical field. From there ability to deliver drugs, perform surgeries and improve efficiency in treating diseases. However, challenges like cost, materials needed, and immune response remain. Despite this many hurdles are being made and as technology evolves these problems are likely to be resolved by increasing our uses and needs for nanorobots. With further research and funding nanobots could transform the way we heal people in medicine.  
-  </p>
-  
+        <h3 id="How are Nanobots powered?">How are Nanobots powered?</h3>
+        <p id="PoweredInText"> </p>
+            <p>
+            There are many ways a nanobot is powered, more ways are still being created now. Most fall under
+            one of three categories:
+            <b>Self-propelled machines:</b> Self-propelled machines power themselves and have been made in shapes including spherical and conical.
+            <b>Fuel-propelled motors:</b> Fuel-propelled motors operate when a particular fuel or chemical produces the energy needed to start moving.
+            <b>Fuel-free propelled motors:</b> Fuel-free propelled motors work through the energy created through magnetic fields or ultra sonic symbols.
+          
+            Nanobots can be powered by generators and capacitors. <a href="https://www.sciencedirect.com/science/article/pii/B9780128178300000011">(ScienceDirect 2020)</a>.Generators on board the nanobot use electrolytes found in the blood and are used as a chemical catalyst that when combined with nanobots creates the internal energy needed for the nanobot to work. For external power, a small fiber optic wire is attached to the device. Then pulses of light are sent through it, these pulses of electricity power can the nanobots. Additionally, magnetic fields can be used to induce electrical currents using a closed conducting loop contained within the nanobots. Ultrasonic signals are also used, employing a material called a piezoelectric membrane, which collects ultrasonic waves and transforms them into electrical power.( <a href="https://www.unite.ai/what-are-nanobots-understanding-nanobot-structure-operation-and-uses/"> (Daniel Nelson, 2020 )</a>)
+        </p>
+
     
+        <h3 id="Uses of Nanorobots">Uses of Nanorobots</h3>
+        <p id="UsesInText">
+            Nanobots show great promise for treating diseases like cancer, diabetes, and heart disease, along with gene therapy. While challenges like funding and material sourcing slow progress, significant breakthroughs have been made, especially in cancer and surgery. Currently, nanobots can identify twelve types of cancer cells and perform advanced, minimally invasive surgeries to enhance treatment efficacy <a href="https://pubs.aip.org/aip/acp/article/2985/1/020003/3278208/3278208/Nanobots-in-medical-field-A-comprehensive-review"> (Nanobots in medical field 2024)</a>To avoid being attacked by the immune system, they are constructed from carbon-based materials with an ultra-smooth surface, which helps them successfully deliver treatment. They also function as targeted drug carriers, precisely delivering medication to tumors. As research continues, nanobots are expected to improve disease treatment and patient outcomes significantly.
+        </p>
 
-      <h3 id="References">References</h3>
-   <h4 style="font-family:calbri;"><b> <a href=" https://www.sciencedirect.com/science/article/pii/B9780128178300000011">Introduction to Active, Smart, and Intelligent Nanomaterials for Biomedical Application – ScienceDirect </a> Jyoti Ahlawat MS, Mahesh Narayan PhD, 2020  </b></h4>
-   <h4 style="font-family:calbri;"><b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8154323/">Magnetically Driven Micro and Nanorobots - PMC  </a> Huaijuan Zhou, Carmen C Mayorga-Martinez, Salvador Pané , Li Zhang §, Martin Pumera , 2021 </b></h4>
-   <h4 style="font-family:calbri;"><b> <a href=" http://article.sapub.org/10.5923.j.biophysics.20170704.02.html"> Microgravity and Nanomaterials </a> Melissa Palma-Jiménez, Yendry Corrales Ureña, Carlos Villalobos Bermúdez, José Roberto Vega Baudrit  </b></h4>
-     <h4 style="font-family:calbri;"><b> <a href="https://www.sciencedirect.com/topics/engineering/nanobots">	Nanobots - an overview | ScienceDirect Topics</a>  , M. Mehta, K. Subramani, in Emerging Nanotechnologies in Dentistry, 2012  </b></h4>
-   <h4 style="font-family:calbri;"><b> <a href="https://pubs.aip.org/aip/acp/article/2985/1/020003/3278208/Nanobots-in-medical-field-A-comprehensive-review">Nanobots in medical field Vinit Joshi</a> Nupur Avasare, Rutwik Bhangale, 2024 </b></h4>
-   <h4 style="font-family:calbri;"><b> <a href="https://www.unite.ai/what-are-nanobots-understanding-nanobot-structure-operation-and-uses/">what are nanbots </a> , Daniel Nelson, 2020 </b></h4>
+        <!-- Image related to Nanobots -->
+        <img src="OIP.jpeg" alt="nanobot picture" width="400" height="300">
+        <p style="font-family: Arial;"><b>Nanobots are currently disrupting the biomedicine sector, with developments in cancer diagnosis and drug delivery. By Azonano, 2023</b></p>
+
+>
+        <h3 id="Problems and challenges faced">Problems and challenges faced</h3>
+        <p id="ProblemsInText">
+            Nanobots show great promise for revolutionizing medical treatments. However, their development faces significant hurdles. The high cost and scarcity of materials make production difficult. A major challenge is the human immune system, which identifies and destroys nanobots before they can function. Researchers are working on ways to camouflage them, but this remains an ongoing issue. Microgravity, or the subtle gravitational forces within the body, can also affect nanobot movement, complicating precise control and targeted delivery. Despite these obstacles, ongoing advancements are bringing nanobot-based therapies closer to reality. <a href="http://article.sapub.org/10.5923.j.biophysics.20170704.02.html"> (Microgravity and Nanomaterials 2021) </a>
+        </p>
 
 
+        <h3 id="Conclusion">Conclusion</h3>
+        <p id="ConclusionInText">
+            In conclusion, nanorobots hold immense potential to revolutionize the medical field. From there ability to deliver drugs, perform surgeries and improve efficiency in treating diseases. However, challenges like cost, materials needed, and immune response remain. Despite this many hurdles are being made and as technology evolves these problems are likely to be resolved by increasing our uses and needs for nanorobots. With further research and funding nanobots could transform the way we heal people in medicine.
+        </p>
+    </div>
 
-<p id="totalWordCount"></p>
-<hr>
+    <!-- References Section -->
+    <h3 id="References">References</h3>
+    <p>
+        <p style="font-family: 'Calibri', sans-serif;">
+            <b>
+                <a href="https://www.sciencedirect.com/science/article/pii/B9780128178300000011">Introduction to Active, Smart, and Intelligent Nanomaterials for Biomedical Application – ScienceDirect</a> Jyoti Ahlawat MS, Mahesh Narayan PhD, 2020
+            </b>
+        </p>
+        <p style="font-family: 'Calibri', sans-serif;">
+            <b>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8154323/">Magnetically Driven Micro and Nanorobots - PMC</a> Huaijuan Zhou, Carmen C Mayorga-Martinez, Salvador Pané , Li Zhang §, Martin Pumera , 2021
+            </b>
+        </p>
+        <p style="font-family: 'Calibri', sans-serif;">
+            <b>
+                <a href="http://article.sapub.org/10.5923.j.biophysics.20170704.02.html">Microgravity and Nanomaterials</a> Melissa Palma-Jiménez, Yendry Corrales Ureña, Carlos Villalobos Bermúdez, José Roberto Vega Baudrit
+            </b>
+        </p>
+        <p style="font-family: 'Calibri', sans-serif;">
+            <b>
+                <a href="https://www.sciencedirect.com/topics/engineering/nanobots">Nanobots - an overview | ScienceDirect Topics</a> , M. Mehta, K. Subramani, in Emerging Nanotechnologies in Dentistry, 2012
+            </b>
+        </p>
+        <p style="font-family: 'Calibri', sans-serif;">
+            <b>
+                <a href="https://pubs.aip.org/aip/acp/article/2985/1/020003/3278208/3278208/Nanobots-in-medical-field-A-comprehensive-review">Nanobots in medical field Vinit Joshi</a> Nupur Avasare, Rutwik Bhangale, 2024
+            </b>
+        </p>
+        <p style="font-family: 'Calibri', sans-serif;">
+            <b>
+                <a href="https://www.unite.ai/what-are-nanobots-understanding-nanobot-structure-operation-and-uses/">what are nanbots, Daniel Nelson, 2020</a>
+            </b>
+        </p>
+    </p>
 
-   
-   <script>
-        function displaywordcount(sectionid) {
-            const textElement = document.getElementById(sectionid);
+    <!-- Video Element -->
+    <video src="6866706video.mp4" alt="video" width="800" height="450" controls></video>
+    <p style="font-family: Arial;"><b> <a href="6866706video.mp4">6866706 powerpoint</a> </b></p>
+
+    <!-- Bottom Banner Image -->
+    <img src="download.jpeg" alt="bottom banner" width="1400" height="400">
+    <p style="font-family: Arial;"><b>The University of Sydney Nano Institute, 2017</b></p>
+
+    <hr>
+
+    <!-- Placeholder for total word count -->
+    <p id="totalWordCount"></p>
+
+    <!-- Last commit time display -->
+    <div id="last-updated">Loading last update time...</div>
+    <!-- Verify Button -->
+    <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+        Verify Last Modified Time
+    </button>
+
+    <script>
+        // Function to calculate and display word count for a specified section
+        function displayWordCount(sectionId) {
+            const textElement = document.getElementById(sectionId);
             if (!textElement) {
-                console.warn(`Element with ID '${sectionid}' not found for word count.`);
-                return 0;
+                console.warn(`Element with ID '${sectionId}' not found for word count.`);
+                return 0; // Return 0 if element is not found
             }
             const text = textElement.textContent;
-            const wordarray = text.trim().split(/\s+/);
-            return wordarray.length;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
- 	  const IntroCount = displayWordCount("IntroInText");
-  	  const TypesCount = displayWordCount("TypesInText");
-   	  const navigateCount = displayWordCount("navigateInText");
-   	  const poweredCount = displayWordCount("poweredInText");
-  	  const UsesCount = displayWordCount("UsesInText");
-  	  const problemsCount = displayWordCount("problemsInText");
-  	  const conclusionCount = displayWordCount("conclusionInText");
-    
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroCount + TypesCount + navigateCount + poweredCount + UsesCount +   problemsCount +  conclusionCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
-  </script>
-  
-  
-   <!-- Last commit time display -->
-<div id="last-updated">Loading last update time...</div>
-<!-- Verify Button -->
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
-</button>
-<script>
-    async function getLastUpdatedTime() {
-        const username = 'FEPSFY6866706';
-        const repo = 'FY6866706';
-       
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+            const wordArray = text.trim().split(/\s+/).filter(word => word.length > 0); // Split and filter empty strings
+            return wordArray.length;
         }
-    }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
-</script>
-   
-   
 
+        // Function to calculate and display total word count from selected sections
+        function displayTotalWordCount() {
+            // Calculate word count for each section and accumulate the total
+            const IntroCount = displayWordCount("IntroInText");
+            const TypesCount = displayWordCount("TypesInText");
+            const NavigateCount = displayWordCount("NavigateInText");
+            const PoweredCount = displayWordCount("PoweredInText");
+            const UsesCount = displayWordCount("UsesInText");
+            const ProblemsCount = displayWordCount("ProblemsInText");
+            const ConclusionCount = displayWordCount("ConclusionInText");
+            
+            // Calculate the sum of all selected sections
+            const totalWordCount = IntroCount + TypesCount + NavigateCount + PoweredCount + UsesCount + ProblemsCount + ConclusionCount;
+            
+            // Display the total word count
+            document.getElementById("totalWordCount").innerText = `Total word count (sections): ${totalWordCount}`;
+        }
 
+        // Function to get the last updated time from GitHub API
+        async function getLastUpdatedTime() {
+            // NOTE: Replace 'octocat' and 'Spoon-Knife' with your actual GitHub username and repository name.
+            // Ensure the repository is public or you handle authentication for private repos.
+            const username = 'FYPSFY6866706'; // Example: your GitHub username
+            const repo = 'FY6866706';       // Example: your GitHub repository name
+            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+            
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                    }
+                });
+    
+                if (!response.ok) {
+                    throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+                }
+    
+                const commits = await response.json();
+    
+                if (commits && commits.length > 0) {
+                    const lastCommitDate = new Date(commits[0].commit.committer.date);
+                    // Displaying the time on load
+                    document.getElementById('last-updated').innerText = `Last Modified Time (GitHub): ${lastCommitDate.toLocaleString()}`;
+                } else {
+                    document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+                }
+            } catch (error) {
+                console.error('Error fetching the last updated time:', error);
+                document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details (username/repo name) and ensure the repository is public.';
+            }
+        }
+
+        // Function to verify the last update time by re-fetching it from the API
+        async function verifyLastUpdatedTime() {
+            document.getElementById('last-updated').innerText = 'Verifying...';
+            await getLastUpdatedTime();
+            alert("Last modified time has been successfully verified from GitHub API.");
+        }
+
+        // Run both functions when the page loads
+        window.onload = function() {
+            displayTotalWordCount();
+            getLastUpdatedTime();
+        };
+    </script>
+
+</body>
 </html>
