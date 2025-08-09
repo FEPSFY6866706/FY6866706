@@ -169,20 +169,21 @@
           const Conclusioncount = displaywordcount ("Conclusion_inText");
 
           const totalwordcount = introcount +  Typescount + navigatecount + poweredcount +  Usescount + Problemscount + Conclusioncount;
-          document.getbyid("totalwordcount").innertext = 'total word count: ${totalwordcount};
+          document.getElementId("totalwordcount").innerText = 'total word count: ${totalwordcount};
         }
         window.onload = displaytotalwordcount:
     </script>
-
-    <script>      
+   
     <div id="last updated">loading updated time...</div>
   <button onclick="verifylastupdatedtime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
     verify last modified time
   </button>
+       
+ <script>
     async function getlastupdatedtime() {
       const username = 'FEPFY6866706';
       const repo = 'FY6866706';
-      const url = 'https://api.github.com/repos/$(username)?$(repo)/commits';
+      const url = 'https://fepsfy6866706.github.io/FY6866706/';
 
       try {
         const response = await fetch(url, {
@@ -196,9 +197,9 @@
         }
         const commits = await response.json();
         if (commits && comits.length > 0) {
-          const lastCommitDate = new date(commits[0].comit.committer.date);
+          const lastCommitDate = new date(commits[0].commit.committer.date);
 
-          document.getElementById('last-updated').innerText = 'last modified time: $(lastcommitdate.tolocalstring()}';
+          document.getElementById('last-updated').innerText = 'last modified time: $(lastCommitDate.toLocalString()}';
         } else {
           document.getElementById('last-updated').innerText = 'no commits found in the repository.';
         }
