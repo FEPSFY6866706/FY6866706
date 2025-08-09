@@ -150,29 +150,37 @@
 <img src="download.jpeg" alt="bottom banner" width="1400" height="400">
     <h5 style="font:arial;"><b> The University of Sydney Nano Institute, 2017 </b> </h5>
    
-    <p id="totalwordcount"></p>
+  <p id="totalwordcount"></p>
     <hr>
-    <script>
-      function displaywordcount(sectionid, outputid) {
-        const text = document.elementbyid(sectionid).textcontent;
-        const wordarray = text.trim().split(/\s+/);
-        const wordcount = wordarray.length:
-        return wordcount:
-      }
-        function displaytotalwordcount() {
-          const introcount = displaywordcount ("Intro_inText");
-          const Typescount = displaywordcount ("Types_inText");
-          const navigatecount = displaywordcount ("navigate_inText");
-          const powercount = displaywordcount ("power_inText");
-          const Usescount = displaywordcount ("Uses_inText");
-          const Problemscount = displaywordcount ("Problems_inText");
-          const Conclusioncount = displaywordcount ("Conclusion_inText");
-
-          const totalwordcount = introcount +  Typescount + navigatecount + poweredcount +  Usescount + Problemscount + Conclusioncount;
-          document.getElementId("totalwordcount").innerText = 'total word count: ${totalwordcount};
+   
+   <script>
+        function displaywordcount(sectionid) {
+            const textElement = document.getElementById(sectionid);
+            if (!textElement) {
+                console.warn(`Element with ID '${sectionid}' not found for word count.`);
+                return 0;
+            }
+            const text = textElement.textContent;
+            const wordarray = text.trim().split(/\s+/);
+            return wordarray.length;
         }
-        window.onload = displaytotalwordcount:
-    </script>
+
+     
+ function displaytotalwordcount() {
+            const abstractCount = displaywordcount("Abstract_section"); 
+            const introductionCount = displaywordcount("Introduction_section");
+            const typesCount = displaywordcount("Types_of_Nanorobots_section");
+            const navigateCount = displaywordcount("How_do_Nanorobots_navigate_section");
+            const poweredCount = displaywordcount("How_are_Nanobots_powered_section");
+            const usesCount = displaywordcount("Uses_of_Nanorobots_section");
+            const problemsCount = displaywordcount("Problems_and_challenges_faced_section");
+            const conclusionCount = displaywordcount("Conclusion_section");
+
+            const totalWordCount = abstractCount + introductionCount + typesCount + navigateCount + poweredCount + usesCount + problemsCount + conclusionCount;
+            document.getElementById("totalwordcount").innerText = `Total word count: ${totalWordCount}`; 
+        }
+
+        window.addEventListener('load', displaytotalwordcount);
    
     <div id="last updated">loading updated time...</div>
   <button onclick="verifylastupdatedtime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
